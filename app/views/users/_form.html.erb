@@ -5,7 +5,7 @@
 		<div id="errorExplanation">
 
 			<h2><%= pluralize(@user.errors.count,"error")%></h2>
-			Prohibited this user from being saved:
+			<%=t(:prohibited_this_user_from_being_saved) %>:
 
 			<ul>
 				<% @user.errors.full_messages.each do |msg| %>
@@ -16,20 +16,108 @@
 	<% end %>
 
 
-	<div class="field">
-		<%= f.label :email %><br />
-		<%= f.text_field :email %>
-	</div>
+	<fieldset><legend><%=t(:security)%></legend>
+		<div class="field">
+			<%= f.label :email %><br />
+			<%= f.text_field :email %>
+		</div>
 
-	<div class="field">
-		<%= f.label :password %><br />
-		<%= f.password_field :password %>
-	</div>
+		<div class="field">
+			<%= f.label t(:password) %><br />
+			<%= f.password_field :password %>
+		</div>
 
-	<div class="field">
-		<%= f.label :password_confirmation %><br />
-		<%= f.password_field :password_confirmation %>
-	</div>
+		<div class="field">
+			<%= f.label t(:password_confirmation) %><br />
+			<%= f.password_field :password_confirmation %>
+		</div>
+	</fieldset>
+
+	<hr />
+
+	<fieldset><legend><%=t(:personal)%></legend>
+		<div class="field">
+			<%= f.label t(:city) %><br />
+			<%= f.phone_field :city_id %>
+		</div>
+
+		<div class="field">
+			<%= f.label t(:fields) %><br />
+			<%= f.text_field :fields %>
+		</div>		
+
+		<div class="field">
+			<%= f.label t(:portifolio_of_oab) %><br />
+			<%= f.text_field :portifolio_of_oab %>
+		</div>		
+
+		<div class="field">
+			<%= f.label t(:phone) %><br />
+			<%= f.telephone_field :phone %>
+		</div>		
+
+		<div class="field">
+			<%= f.label t(:about) %><br />
+			<%= f.text_area :about, :size =>"70x10" %>
+		</div>		
+	</fieldset>
+
+	<hr />
+
+	<fieldset><legend><%=t(:experience)%></legend>
+		<div class="field">
+			<%= f.label t(:teaching) %>
+			<%= f.select :teaching, [0,1,2,3,4,5,6,7,8,9,10] %>Ano(s)			
+		</div>
+
+		<div class="field">
+			<%= f.label t(:professional) %>
+			<%= f.select :professional, [0,1,2,3,4,5,6,7,8,9,10] %> Ano(s)
+		</div>		
+
+		<div class="field">
+			<%= f.label t(:books_published) %>
+			<%= f.select :books_published, [0,1,2,3,4,5,6,7,8,9,10] %>Livros(s)
+		</div>		
+
+		<div class="field">
+			<%= f.label t(:articles_published) %>
+			<%= f.select :articles_published, [0,1,2,3,4,5,6,7,8,9,10] %>Artigo(s)
+		</div>		
+
+		<div class="field">
+			<%= f.check_box :postgraduate %>
+			<%= f.label t(:postgraduate) %>			
+		</div>		
+
+		<div class="field">
+			<%= f.check_box :doctorate_in_law %>
+			<%= f.label t(:doctorate_in_law) %>
+		</div>		
+
+		<div class="field">
+			<%= f.check_box :master_of_law %>
+			<%= f.label t(:master_of_law) %>
+		</div>		
+
+		<div class="field">
+			<%= f.check_box :postgraduate_in_law %>
+			<%= f.label t(:postgraduate_in_law) %>			
+		</div>		
+
+		<div class="field">
+			<%= f.check_box :foreign_laguage %>
+			<%= f.label t(:foreign_laguage) %>			
+		</div>		
+
+		<div class="field">
+			<%= f.check_box :terms_of_use %> 
+			<%= f.label t(:terms_of_use) %>
+		</div>		
+
+	</fieldset>
+
+	<hr />
 
 	<div class="actions">
 		<%= f.submit %>

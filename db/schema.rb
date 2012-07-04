@@ -23,8 +23,25 @@ ActiveRecord::Schema.define(:version => 20120627040932) do
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "hashed_password"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.integer  "city_id"
+    t.string   "fields"
+    t.string   "portifolio_of_oab"
+    t.string   "phone"
+    t.text     "about"
+    t.integer  "teaching"
+    t.integer  "professional"
+    t.integer  "books_published"
+    t.integer  "articles_published"
+    t.boolean  "postgraduate"
+    t.boolean  "doctorate_in_law"
+    t.boolean  "master_of_law"
+    t.boolean  "postgraduate_in_law"
+    t.boolean  "foreign_laguage"
+    t.boolean  "terms_of_use"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

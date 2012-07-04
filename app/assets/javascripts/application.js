@@ -13,3 +13,24 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= functions
+
+$(function(){
+
+	$("#security-toggle,#personal-toggle,#experience-toggle").hide();
+
+	$("#security").click(function(){
+		$("#security-toggle").toggle(2000);
+	});
+
+	$("#personal").click(function(){
+		$("#personal-toggle").toggle(2000);
+	});
+
+	$("#experience").click(function(){
+		$("#experience-toggle").toggle(2000);
+	});
+	
+})
+
+

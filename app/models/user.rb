@@ -2,7 +2,9 @@ require 'digest'
 
 class User < ActiveRecord::Base
 
-	attr_accessible :email, :password, :password_confirmation
+	attr_accessible :email, :password, :password_confirmation, :city_id, :fields, :portifolio_of_oab,
+      :phone, :about, :teaching, :professional, :books_published, :articles_published, :postgraduate, :doctorate_in_law,
+      :master_of_law, :postgraduate_in_law, :foreign_laguage, :terms_of_use
 
 	attr_accessor :password
 

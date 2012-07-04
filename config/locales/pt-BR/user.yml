@@ -1,0 +1,34 @@
+pt-BR:
+ new_user: 				"Registrar usuário"
+ register: 				"Registrar"
+ user_successfully: 	"Usuário cadastrado com sucesso!"
+ 
+
+
+
+ security:				"Segurança"
+ password: 				"Senha"
+ password_confirmation: "Confirmação de senha"
+ 
+
+ personal:				"Pessoal"
+ city: 					"Cidade" 
+ fields:				"Área de atuação"
+ portifolio_of_oab:		"Cateira da OAB"
+ phone:					"Telefone"
+ about:					"Sobre min"
+
+ experience:			"Experiência"
+ teaching:				"Exercício do magistério superior, em disciplina da área jurídica, em Instituição de Ensino Superior"
+ professional:			"Exercício profissional de advocacia, de consultoria, de assessoria e de diretoria em atividades eminentemente jurídicas"
+ books_published:		"Livros publicados no âmbito da ciência jurídica"
+ articles_published:	"Artigos, pareceres, ensaios e trabalhos jurídicos publicados."
+
+ postgraduate:			"Pós Doutorado em Direito "        
+ doctorate_in_law:		"Doutorado em Direito"
+ master_of_law:       	"Mestrado em Direito"
+ postgraduate_in_law: 	"Pós graduação em nivel de especialização em Direito"
+ foreign_laguage:     	"Domínio de Lingua Estrangeira"
+ terms_of_use:        	"Li e concordo com os Termos de Uso."
+
+ prohibited_this_user_from_being_saved: "Impediu você de salvar"

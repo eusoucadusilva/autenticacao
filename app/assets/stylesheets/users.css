@@ -1,0 +1,8 @@
+fieldset {
+  padding: 1em;
+  font:80%/1 sans-serif;
+}
+
+legend {
+	font-variant: normal/small-caps;
+}
